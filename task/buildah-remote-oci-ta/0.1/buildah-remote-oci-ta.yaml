@@ -447,7 +447,7 @@ spec:
 
       PODMAN_NVIDIA_ARGS=()
       if [[ "$PLATFORM" == "linux-g"* ]]; then
-          PODMAN_NVIDIA_ARGS+=("--device nvidia.com/gpu=all" "--security-opt=label=disable")
+          PODMAN_NVIDIA_ARGS+=("--device nvidia.com/gpu=all")
       fi
 
       if ! [[ $IS_LOCALHOST ]]; then

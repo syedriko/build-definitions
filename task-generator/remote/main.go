@@ -229,7 +229,7 @@ if ! [[ $IS_LOCALHOST ]]; then
 		ret += "\nchmod +x " + script + "\n"
 		ret += "\nPODMAN_NVIDIA_ARGS=()"
 		ret += "\nif [[ \"$PLATFORM\" == \"linux-g\"* ]]; then"
-		ret += "\n    PODMAN_NVIDIA_ARGS+=(\"--device nvidia.com/gpu=all\" \"--security-opt=label=disable\")"
+		ret += "\n    PODMAN_NVIDIA_ARGS+=(\"--device nvidia.com/gpu=all\")"
 		ret += "\nfi\n"
 
 		if task.Spec.StepTemplate != nil {
